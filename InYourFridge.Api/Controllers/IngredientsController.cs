@@ -9,13 +9,13 @@ using InYourFridge.Api.Models;
 
 namespace InYourFridge.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
-    public class IngredientController : ControllerBase
+    public class IngredientsController : ControllerBase
     {
         private readonly FridgeContext _context;
 
-        public IngredientController(FridgeContext context)
+        public IngredientsController(FridgeContext context)
         {
             _context = context;
         }

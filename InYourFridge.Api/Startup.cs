@@ -29,7 +29,7 @@ namespace InYourFridge.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<FridgeContext>();
+            services.AddDbContext<FridgeContext>(options => options.UseInMemoryDatabase("Fridge"));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "InYourFridge.Api", Version = "v1"});

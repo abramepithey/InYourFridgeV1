@@ -18,6 +18,8 @@ namespace InYourFridge.Api.Models
         {
             modelBuilder.Entity<Order>().HasOne(i => i.Ingredient).WithMany(o => o.Orders)
                 .HasForeignKey(o => o.IngredientId);
+
+            modelBuilder.Seed();
         }
 
         public DbSet<Ingredient> Ingredients { get; set; }

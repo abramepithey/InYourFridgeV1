@@ -18,6 +18,8 @@ namespace InYourFridge.Api.Controllers
         public OrdersController(FridgeContext context)
         {
             _context = context;
+
+            _context.Database.EnsureCreated();
         }
 
         // GET: api/Order

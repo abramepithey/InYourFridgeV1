@@ -18,6 +18,8 @@ namespace InYourFridge.Api.Controllers
         public IngredientsController(FridgeContext context)
         {
             _context = context;
+
+            _context.Database.EnsureCreated();
         }
 
         // GET: api/Ingredient

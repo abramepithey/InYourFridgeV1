@@ -11,11 +11,12 @@ namespace InYourFridge.Api.Models
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source=app.db");
+            optionsBuilder.UseLazyLoadingProxies();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Ingredient>().HasMany(i => i.Orders).WithOne(o => o.Ingredient)
+            modelBuilder.Entity<Order>().HasOne(i => i.Ingredient).WithMany(o => o.Orders)
                 .HasForeignKey(o => o.IngredientId);
         }
 

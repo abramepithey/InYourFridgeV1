@@ -40,6 +40,20 @@ namespace InYourFridge.Api.Controllers
 
             return ingredient;
         }
+        
+        // GET: api/Ingredient/5
+        [HttpGet("{id}/orders")]
+        public async Task<ActionResult<Order[]>> GetOrdersOfIngredient(int id)
+        {
+            var ingredient = await _context.Ingredients.FindAsync(id);
+
+            if (ingredient == null)
+            {
+                return NotFound();
+            }
+
+            return ingredient.Orders.ToArray();
+        }
 
         // PUT: api/Ingredient/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754

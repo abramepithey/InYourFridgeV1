@@ -49,7 +49,7 @@ namespace InYourFridge.Api.Controllers
         
         // GET: api/Ingredient/5
         [HttpGet("{id}/orders")]
-        public async Task<ActionResult<Order[]>> GetOrdersOfIngredient(int id)
+        public async Task<ActionResult<IEnumerable<Order>>> GetOrdersOfIngredient(int id)
         {
             var ingredient = await _context.Ingredients.FindAsync(id);
 

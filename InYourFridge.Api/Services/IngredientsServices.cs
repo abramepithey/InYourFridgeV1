@@ -8,8 +8,37 @@ using Microsoft.EntityFrameworkCore;
 
 namespace InYourFridge.Api.Services
 {
-    public class IngredientsServices
+    public class IngredientsServices : IIngredientsServices
+
     {
-        
+        public async Task<ActionResult<IEnumerable<Ingredient>>> GetIngredients()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public async Task<ActionResult<Ingredient>> GetIngredient(int id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public async Task<ActionResult<IEnumerable<Order>>> GetOrdersOfIngredient(int id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public async Task<IActionResult> PutIngredient(int id, Ingredient ingredient)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public async Task<ActionResult<Ingredient>> PostIngredient(Ingredient ingredient)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public async Task<IActionResult> DeleteIngredient(int id)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

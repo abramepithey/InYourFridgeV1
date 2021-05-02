@@ -30,7 +30,7 @@ namespace InYourFridge.Api.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Ingredient>>> GetIngredients()
         {
-            return await _context.Ingredients.ToListAsync();
+            return await _services.GetIngredients();
         }
 
         // GET: api/Ingredient/5

@@ -21,7 +21,7 @@ namespace InYourFridge.Api.Services
         
         public async Task<ActionResult<IEnumerable<Ingredient>>> GetIngredients()
         {
-            throw new System.NotImplementedException();
+            return await _context.Ingredients.ToListAsync();
         }
 
         public async Task<ActionResult<Ingredient>> GetIngredient(int id)

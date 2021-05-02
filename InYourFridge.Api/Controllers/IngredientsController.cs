@@ -2,10 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using InYourFridge.Api.Contracts;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using InYourFridge.Api.Models;
+using InYourFridge.Api.Services;
 
 namespace InYourFridge.Api.Controllers
 {
@@ -14,10 +16,12 @@ namespace InYourFridge.Api.Controllers
     public class IngredientsController : ControllerBase
     {
         private readonly FridgeContext _context;
+        private readonly IIngredientsServices _services;
 
-        public IngredientsController(FridgeContext context)
+        public IngredientsController(FridgeContext context, IIngredientsServices services)
         {
             _context = context;
+            _services = services;
 
             _context.Database.EnsureCreated();
         }

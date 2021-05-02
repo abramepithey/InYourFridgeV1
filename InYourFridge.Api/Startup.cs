@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using InYourFridge.Api.Contracts;
 using InYourFridge.Api.Models;
+using InYourFridge.Api.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,6 +32,7 @@ namespace InYourFridge.Api
         {
             services.AddControllers();
             services.AddDbContext<FridgeContext>(options => options.UseInMemoryDatabase("Fridge"));
+            services.AddTransient<IIngredientsServices, IngredientsServices>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "InYourFridge.Api", Version = "v1"});

@@ -18,9 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Contracts" />
       <Folder Include="Controllers" />
-      <Folder Include="Services" />
     </ItemGroup>
 
 </Project>

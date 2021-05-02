@@ -9,8 +9,16 @@ using Microsoft.EntityFrameworkCore;
 namespace InYourFridge.Api.Services
 {
     public class IngredientsServices : IIngredientsServices
-
     {
+        private readonly FridgeContext _context;
+
+        public IngredientsServices(FridgeContext context)
+        {
+            _context = context;
+
+            _context.Database.EnsureCreated();
+        }
+        
         public async Task<ActionResult<IEnumerable<Ingredient>>> GetIngredients()
         {
             throw new System.NotImplementedException();

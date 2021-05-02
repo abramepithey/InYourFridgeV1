@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InYourFridge.Api", "InYourFridge.Api\InYourFridge.Api.csproj", "{7046CE1C-1768-4944-A532-5A24BD51841D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InYourFridge.Blazor", "InYourFridge.Blazor\InYourFridge.Blazor.csproj", "{A04807DB-7B01-4333-B0AE-3ADDF2898CDF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{7046CE1C-1768-4944-A532-5A24BD51841D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7046CE1C-1768-4944-A532-5A24BD51841D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7046CE1C-1768-4944-A532-5A24BD51841D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A04807DB-7B01-4333-B0AE-3ADDF2898CDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A04807DB-7B01-4333-B0AE-3ADDF2898CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A04807DB-7B01-4333-B0AE-3ADDF2898CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A04807DB-7B01-4333-B0AE-3ADDF2898CDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

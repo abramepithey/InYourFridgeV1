@@ -14,5 +14,10 @@ namespace InYourFridge.Blazor.Pages
         public IIngredientServices IngredientServices { get; set; }
 
         public IEnumerable<Ingredient> Ingredients { get; set; } = new List<Ingredient>();
+        
+        protected override async Task OnInitializedAsync()
+        {
+            Ingredients = (await IngredientServices.GetIngredients()).ToList();
+        }
     }
 }

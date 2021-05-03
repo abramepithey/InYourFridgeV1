@@ -9,6 +9,13 @@ namespace InYourFridge.Blazor.Services
 {
     public class IngredientServices : IIngredientServices
     {
+        private readonly HttpClient _httpClient;
+
+        public IngredientServices(HttpClient httpClient)
+        {
+            _httpClient = httpClient;
+        }
+        
         public async Task<IEnumerable<Ingredient>> GetIngredients()
         {
             throw new System.NotImplementedException();

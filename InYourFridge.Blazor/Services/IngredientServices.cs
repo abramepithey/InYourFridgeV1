@@ -18,7 +18,7 @@ namespace InYourFridge.Blazor.Services
         
         public async Task<IEnumerable<Ingredient>> GetIngredients()
         {
-            throw new System.NotImplementedException();
+            return await _httpClient.GetFromJsonAsync<List<Ingredient>>("ingredients");
         }
     }
 }

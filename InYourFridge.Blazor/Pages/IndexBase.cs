@@ -10,6 +10,9 @@ namespace InYourFridge.Blazor.Pages
 {
     public class IndexBase : ComponentBase
     {
-        
+        [Inject]
+        public IIngredientServices IngredientServices { get; set; }
+
+        public IEnumerable<Ingredient> Ingredients { get; set; } = new List<Ingredient>();
     }
 }

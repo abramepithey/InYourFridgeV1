@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using InYourFridge.Api.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
@@ -10,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using InYourFridge.Blazor.Data;
+using InYourFridge.Blazor.Services;
 
 namespace InYourFridge.Blazor
 {
@@ -28,6 +30,10 @@ namespace InYourFridge.Blazor
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.AddHttpClient<IIngredientServices, IngredientServices>(client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:5001/");
+            });
             services.AddSingleton<WeatherForecastService>();
         }
 

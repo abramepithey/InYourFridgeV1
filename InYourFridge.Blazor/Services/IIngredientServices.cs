@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using InYourFridge.Api.Models;
+using InYourFridge.Blazor.Models;
 
 namespace InYourFridge.Blazor.Services
 {
